@@ -1,0 +1,9 @@
+pandas
+scikit-learn
+tensorflow
+matplotlib
+keras
+joblib
+sqlalchemy
+numpy
+pyodbc
