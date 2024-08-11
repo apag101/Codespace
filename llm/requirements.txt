@@ -7,3 +7,8 @@ joblib
 sqlalchemy
 numpy
 pyodbc
+langchain
+langchain-community
+pypdf
+langchain-openai
+chromadb
