@@ -12,3 +12,10 @@ langchain-community
 pypdf
 langchain-openai
 chromadb
+openai
+llama-index==0.10.38
+streamlit
+config
+wikipedia
+llama_index
+ollama
