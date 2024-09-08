@@ -3,8 +3,9 @@
 
 import os
 
-os.environ['OPENAI_API_KEY'] = ''
-from llama_index.core import PTVectorStoreIndex
+
+#os.environ['OPENAI_API_KEY'] = ''
+from llama_index.core import GPTVectorStoreIndex
 from llama_index.core import SimpleDirectoryReader
 
 # load the .txt data and convert it into an index
