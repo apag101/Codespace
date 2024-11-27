@@ -10,7 +10,7 @@ import openai
 
 # load document
 from langchain.document_loaders import PyPDFLoader
-loader = PyPDFLoader("230317564.pdf")
+loader = PyPDFLoader("../data/230213971v1.pdf")
 documents = loader.load()
 
 from langchain.llms import OpenAI

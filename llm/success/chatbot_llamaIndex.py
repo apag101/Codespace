@@ -12,7 +12,7 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core.node_parser import SentenceSplitter   
 
 
-doc_path = './data/'
+doc_path = '../data/'
 index_file = 'index.json'
 
 if 'response' not in st.session_state:

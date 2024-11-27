@@ -17,7 +17,7 @@ import openai
 
 
 # Load the PDF document
-loader = PyPDFLoader("230317564.pdf")
+loader = PyPDFLoader("../data/230213971v1.pdf")
 documents = loader.load()
 
 # split the documents into chunks
