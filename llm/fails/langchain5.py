@@ -6,7 +6,7 @@ from langchain_community.document_loaders import YoutubeLoader
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from  langchain_community import embeddings
+from  langchain import embeddings
 from langchain.docstore.document import Document
 from langchain_community.vectorstores import Chroma
 from langchain_community.chat_models import ChatOpenAI
@@ -89,8 +89,9 @@ for i in range(1, 20):
             + "\n"
             + BeautifulSoup(
                 [x["body"] for x in question["answers"] if x["is_accepted"]][0]
-            ).get_text(),
-        )
+            ).get_text()
+            if any(x["is_accepted"] for x in question["answers"])
+            else "",)
         source = question["link"]
         so_data.append(Document(page_content=str(text), metadata={"source": source}))
 print(len(so_data)) #777
