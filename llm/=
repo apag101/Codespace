@@ -1,0 +1,3 @@
+Requirement already satisfied: bitsandbytes in /opt/anaconda3/envs/lora/lib/python3.11/site-packages (0.41.3)
+Collecting bitsandbytes
+  Using cached bitsandbytes-0.42.0-py3-none-any.whl.metadata (9.9 kB)
