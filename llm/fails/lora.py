@@ -4,6 +4,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import prepare_model_for_kbit_training, LoraConfig, get_peft_model
 import transformers
+from datasets import load_dataset
 model_name = "EleutherAI/gpt-neox-20b"
 
 #Tokenizer
@@ -60,7 +61,7 @@ trainer = transformers.Trainer(
 trainer.train()
 
 text = "Ask not what your country"
-device = "cuda:0"
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
 inputs = tokenizer(text, return_tensors="pt").to(device)
 
 outputs = model.generate(**inputs, max_new_tokens=20)
