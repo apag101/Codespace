@@ -27,10 +27,9 @@ model = prepare_model_for_kbit_training(model)
 config = LoraConfig(
     r=8, 
     lora_alpha=32, 
-    target_modules=["query_key_value"], 
+    target_modules=["q_proj", "v_proj"], 
     lora_dropout=0.05, 
-    bias="none", 
-    task_type="CAUSAL_LM"
+    bias="none"
 )
 
 model = get_peft_model(model, config)
