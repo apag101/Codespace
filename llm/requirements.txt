@@ -13,7 +13,7 @@ pypdf
 langchain-openai
 chromadb
 openai
-llama-index
+llama-index==0.11.0
 streamlit
 config
 wikipedia
