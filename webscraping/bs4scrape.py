@@ -1,3 +1,5 @@
+# Source Udemeny, test url for scraping https://scrapinghub.github.io/xpath-playground/
+
 from bs4 import BeautifulSoup
 import requests
 import time
