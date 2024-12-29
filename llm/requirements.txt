@@ -13,13 +13,13 @@ pypdf
 langchain-openai
 chromadb
 openai
-llama-index==0.11.0
+llama-index
 streamlit
 config
 wikipedia
 llama_index
 ollama
-transformers==4.38.2
-bitsandbytes==0.42.0
-accelerate== 0.27.2
+transformers
+bitsandbytes
+accelerate
 torch
