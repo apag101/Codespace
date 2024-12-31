@@ -12,3 +12,6 @@ gemini_model = GenerativeModel(
     generation_config=GenerationConfig(temperature=0),
 )
 chat = gemini_model.start_chat()
+
+response = chat.send_message("What is the current exchange rate for USD vs EUR ?")
+answer = response.candidates[0].content.parts[0].text

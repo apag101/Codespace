@@ -3,6 +3,6 @@ requests
 lxml
 selenium==3.141.0 
 scrapy
-urllib3==1.26.16
+urllib3==1.26.19
 pandas
 
