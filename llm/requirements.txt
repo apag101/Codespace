@@ -23,3 +23,10 @@ transformers
 bitsandbytes
 accelerate
 torch
+poetry
+vertexai==1.65.0
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-core==0.2.38
+langchain-google-community==1.0.8
+langchain-google-vertexai==1.0.6
