@@ -9,7 +9,7 @@ from twisted.internet.error import DNSLookupError, TimeoutError
 class TranscriptsSpider(CrawlSpider):
     name = "transcripts"
     allowed_domains = ["subslikescript.com"]
-    start_urls = ["https://subslikescript.com/"]
+    start_urls = ["https://subslikescript.com/movies/"]
 
     user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
 
