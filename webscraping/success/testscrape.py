@@ -1,5 +1,6 @@
 import scrapy
 from scrapy.http import Request
+import hashlib
 
 class WorldometersSpider(scrapy.Spider):
     name = 'worldometers'
@@ -15,13 +16,8 @@ class WorldometersSpider(scrapy.Spider):
             country_name = country.xpath(".//text()").get()
             link = country.xpath(".//@href").get()
 
-            # Absolute URL
-            # absolute_url = f'https://www.worldometers.info/{link}'  # concatenating links with f-string
-            # absolute_url = response.urljoin(link)  # concatenating links with urljoin
-            # yield scrapy.Request(url=absolute_url)  # sending a request with the absolute url
-
             # Return relative URL (sending a request with the relative url)
-            yield response.follow(url=link, callback=self.parse_country, meta={'country':country_name})
+            yield response.follow(url=link, callback=self.parse_country, meta={'country': country_name})
 
     # Getting data inside the "link" website
     def parse_country(self, response):
@@ -35,9 +31,7 @@ class WorldometersSpider(scrapy.Spider):
 
             # Return data extracted
             yield {
-                'country':country,
+                'country': country,
                 'year': year,
-                'population':population,
+                'population': population,
             }
-
-
