@@ -20,6 +20,11 @@ class WorldometersSpider(scrapy.Spider):
             # absolute_url = response.urljoin(link)  # concatenating links with urljoin
             # yield scrapy.Request(url=absolute_url)  # sending a request with the absolute url
 
+            # Absolute URL
+            # absolute_url = f'https://www.worldometers.info/{link}'  # concatenating links with f-string
+            # absolute_url = response.urljoin(link)  # concatenating links with urljoin
+            # yield scrapy.Request(url=absolute_url)  # sending a request with the absolute url
+
             # Return relative URL (sending a request with the relative url)
             yield response.follow(url=link, callback=self.parse_country, meta={'country':country_name})
 
