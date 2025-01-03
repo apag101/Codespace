@@ -7,13 +7,7 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
-import logging
-class ScrapyTestPipeline:
-    def open_spider(self, spider):
-        logging.warning("Spider opened: %s" % spider.name)
 
-    def close_spider(self, spider): 
-        logging.warning("Spider closed: %s" % spider.name)
-
+class TestapiPipeline:
     def process_item(self, item, spider):
         return item
