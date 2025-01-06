@@ -32,3 +32,4 @@ langchain-google-community==1.0.8
 langchain-google-vertexai==1.0.6
 google-api-python-client
 py_expression_eval
+cufflinks
