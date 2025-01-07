@@ -33,3 +33,4 @@ langchain-google-vertexai==1.0.6
 google-api-python-client
 py_expression_eval
 cufflinks
+crewai_tools
