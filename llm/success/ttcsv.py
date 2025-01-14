@@ -1,5 +1,5 @@
 # Meduim Article: https://medium.com/artificial-corner/a-7-steps-guide-to-install-and-run-lamini-lm-on-your-computer-7841ea94522b
-
+#run with streamlit run ttcsv.py
 from langchain import OpenAI
 from langchain_experimental.agents import create_pandas_dataframe_agent
 import pandas as pd
